@@ -4,7 +4,7 @@
    셸 파일을 고치면 SHELL_VERSION 을 올려 주세요.
    ───────────────────────────────────────────────────────────── */
 
-var SHELL_VERSION = 'shell-v1';
+var SHELL_VERSION = 'shell-v2';
 var DATA_CACHE = 'data-v1';
 var FONT_CACHE = 'font-v1';
 
@@ -89,6 +89,10 @@ self.addEventListener('fetch', function (e) {
   }
 
   if (url.origin !== self.location.origin) return;
+
+  // APK 내려받기는 서비스 워커가 건드리지 않는다.
+  // (캐시에 1MB 를 쌓을 이유도 없고, 오프라인 폴백이 index.html 을 돌려주면 안 된다)
+  if (url.pathname.endsWith('.apk')) return;
 
   // 브리핑 데이터 — 항상 최신을 먼저 시도
   if (url.pathname.indexOf('/data/') > -1) {
