@@ -1,0 +1,6 @@
+# 개인용 브리핑 페이지 — 색인하지 않습니다.
+# 참고: 프로젝트 Pages(user.github.io/daily-brief/)에서는 크롤러가 도메인 루트의
+# robots.txt 만 읽으므로 이 파일은 커스텀 도메인을 붙였을 때 효력이 있습니다.
+# 실제 색인 차단은 index.html 의 <meta name="robots" content="noindex"> 가 담당합니다.
+User-agent: *
+Disallow: /

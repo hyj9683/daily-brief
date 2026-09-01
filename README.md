@@ -153,8 +153,17 @@ git push -u origin main
 GitHub 저장소 → **Settings → Pages → Source: Deploy from a branch → main / (root)** 로 켜면
 `https://<아이디>.github.io/daily-brief/` 에서 열립니다.
 
-> 저장소를 Public으로 두면 브리핑 내용이 공개됩니다. Private 저장소는 GitHub Pages 사용에
-> 유료 플랜이 필요하니, 공개해도 괜찮은 내용인지 한 번 확인하세요.
+### 공개 범위에 대해
+
+저장소는 **Public** 입니다 (GitHub Pages 무료 조건). 공개되는 것은 앱 코드와 브리핑 내용뿐이고,
+남이 읽을 수는 있어도 고치거나 push 할 수는 없습니다.
+
+- 커밋 작성자 이메일은 GitHub `@users.noreply.github.com` 주소를 씁니다 — 실제 메일 주소는 노출되지 않습니다.
+- `index.html` 의 `<meta name="robots" content="noindex">` 로 검색 엔진 색인을 막았습니다.
+  주소를 아는 사람만 들어옵니다. (`robots.txt` 도 넣어 뒀지만, 프로젝트 Pages 에서는 크롤러가
+  도메인 루트의 robots.txt 만 읽기 때문에 실제로 일하는 건 메타 태그 쪽입니다.)
+- 저장소를 Private 으로 바꿔도 **배포된 사이트 주소 자체는 여전히 공개**입니다(유료 플랜 제외).
+  즉 공개 범위 설정으로 사이트를 숨길 수는 없습니다.
 
 ---
 
