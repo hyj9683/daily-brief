@@ -63,6 +63,22 @@
       "source": "https://commons.wikimedia.org/wiki/File:Chohung_Bank_Headquarters_(2000).jpg"
     },
     {
+      "id": "cheongwadae",
+      "file": "photos/cheongwadae.jpg",
+      "alt": "청와대 본관",
+      "keywords": [
+        "정책",
+        "청와대",
+        "대통령실",
+        "정책실장",
+        "대통령",
+        "개각",
+        "정부"
+      ],
+      "credit": "Youngjin / Wikimedia Commons · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:20240720_cheongwadae_main_building_01.jpg"
+    },
+    {
       "id": "construct",
       "file": "photos/construct.jpg",
       "alt": "타워크레인이 선 건설 현장",
