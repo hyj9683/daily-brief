@@ -120,6 +120,26 @@ node publish.mjs 오늘원고.json --push
 
 표의 칸은 문자열이거나 `{ "text": "+1.75%", "dir": "up" }` 형태입니다.
 
+### 사진
+
+`photos/` 에 주제별 사진 라이브러리가 있고, 무엇이 있는지는 `photos/index.json` 에 정리돼 있습니다
+(각 사진의 `keywords` 로 그날 기사에 맞는 것을 고릅니다).
+
+카드 섹션과 히어로에는 `image` 를, 본문 중간에는 `photo` 블록을 씁니다.
+
+```jsonc
+// 카드/히어로
+"image": { "src": "photos/oil.jpg", "alt": "원유 채굴 현장", "caption": "미·이란 교전 재개로 WTI 가 2.83% 올랐다." }
+
+// 본문 블록
+{ "type": "photo", "src": "photos/nyse.jpg", "alt": "뉴욕증권거래소 건물 외관", "caption": "3대 지수가 일제히 내렸다." }
+```
+
+`src` 는 반드시 `photos/` 로 시작하는 저장소 안의 파일이어야 합니다. 파일이 없으면 앱이 그 사진만
+조용히 걷어내고 나머지는 정상 표시하며, `publish.mjs` 가 발행 전에 누락을 경고합니다.
+
+새 주제가 필요하면 사진을 `photos/` 에 넣고 `photos/index.json` 에 키워드와 함께 등록하세요.
+
 ### 본문에 쓸 수 있는 태그
 
 `text` · `items` · `desc` · `footer` 안에서는 다음만 살아남고 나머지는 제거됩니다.
