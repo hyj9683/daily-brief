@@ -6,7 +6,6 @@
   "dir": "ltr",
   "start_url": "./?source=pwa",
   "scope": "./",
-  "id": "/daily-brief/",
   "display": "standalone",
   "display_override": ["standalone", "minimal-ui"],
   "orientation": "portrait",
