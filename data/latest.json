@@ -10,27 +10,95 @@
       "kicker": "Market Board",
       "title": "시황판",
       "subtitle": "한국·미국 증시 마감 시황을 한 화면에 정리했습니다",
-      "stamp": ["2026. 09. 01 (화) 조간", "국내·미국 8월 31일 (월) 마감"],
+      "stamp": [
+        "2026. 09. 01 (화) 조간",
+        "국내·미국 8월 31일 (월) 마감"
+      ],
       "ticker": [
-        { "label": "KOSPI",     "value": "6,820.02",  "delta": "▲ 0.46%",  "dir": "up" },
-        { "label": "KOSDAQ",    "value": "—",         "delta": "▼ 0.49%",  "dir": "down" },
-        { "label": "USD/KRW",   "value": "1,368.6",   "delta": "▼ 3.9원",  "dir": "down" },
-        { "label": "美 10년물",  "value": "4.752%",    "delta": "▲ 3.1bp", "dir": "up" },
-        { "label": "WTI",       "value": "$85.76",    "delta": "▲ 2.83%",  "dir": "up" },
-        { "label": "DOW",       "value": "53,185.90", "delta": "▼ 0.70%",  "dir": "down" },
-        { "label": "S&P 500",   "value": "7,686.14",  "delta": "▼ 0.33%",  "dir": "down" },
-        { "label": "NASDAQ",    "value": "26,370.89", "delta": "▼ 0.12%",  "dir": "down" }
+        {
+          "label": "KOSPI",
+          "value": "6,820.02",
+          "delta": "▲ 0.46%",
+          "dir": "up"
+        },
+        {
+          "label": "KOSDAQ",
+          "value": "—",
+          "delta": "▼ 0.49%",
+          "dir": "down"
+        },
+        {
+          "label": "USD/KRW",
+          "value": "1,368.6",
+          "delta": "▼ 3.9원",
+          "dir": "down"
+        },
+        {
+          "label": "美 10년물",
+          "value": "4.752%",
+          "delta": "▲ 3.1bp",
+          "dir": "up"
+        },
+        {
+          "label": "WTI",
+          "value": "$85.76",
+          "delta": "▲ 2.83%",
+          "dir": "up"
+        },
+        {
+          "label": "DOW",
+          "value": "53,185.90",
+          "delta": "▼ 0.70%",
+          "dir": "down"
+        },
+        {
+          "label": "S&P 500",
+          "value": "7,686.14",
+          "delta": "▼ 0.33%",
+          "dir": "down"
+        },
+        {
+          "label": "NASDAQ",
+          "value": "26,370.89",
+          "delta": "▼ 0.12%",
+          "dir": "down"
+        }
       ],
       "hero": {
         "tier": "오늘의 한 줄",
         "headline": "3%대로 급락하던 코스피, 자사주가 되살렸다",
         "lead": "워시 미 연준 의장의 금리 인상 시사와 미·이란 충돌에 장 초반 3% 넘게 밀렸지만, <b>삼성전자·SK하이닉스의 자사주 매입</b> 소식이 전해지며 오후 들어 상승 전환했습니다. 코스닥은 0.49% 내렸습니다.",
         "kpis": [
-          { "label": "코스피",            "value": "6,820.02", "delta": "+0.46%", "dir": "up" },
-          { "label": "원/달러 (주간거래)", "value": "1,368.6",  "delta": "−3.9원", "dir": "down" },
-          { "label": "미 10년물 국채",     "value": "4.752%",   "delta": "+3.1bp", "dir": "up" },
-          { "label": "WTI 유가",          "value": "$85.76",   "delta": "+2.83%", "dir": "up" }
-        ]
+          {
+            "label": "코스피",
+            "value": "6,820.02",
+            "delta": "+0.46%",
+            "dir": "up"
+          },
+          {
+            "label": "원/달러 (주간거래)",
+            "value": "1,368.6",
+            "delta": "−3.9원",
+            "dir": "down"
+          },
+          {
+            "label": "미 10년물 국채",
+            "value": "4.752%",
+            "delta": "+3.1bp",
+            "dir": "up"
+          },
+          {
+            "label": "WTI 유가",
+            "value": "$85.76",
+            "delta": "+2.83%",
+            "dir": "up"
+          }
+        ],
+        "image": {
+          "src": "photos/semiconductor.jpg",
+          "alt": "반도체 웨이퍼 클로즈업",
+          "caption": "삼성전자·SK하이닉스 자사주 매입이 지수를 되돌렸다."
+        }
       },
       "sections": [
         {
@@ -59,10 +127,30 @@
               "type": "hbar",
               "caption": "8/31 투자주체별 순매수 (억원)",
               "rows": [
-                { "label": "기타법인", "value": "+15,433", "magnitude": 15433, "dir": "up" },
-                { "label": "기관",     "value": "−9,096",  "magnitude": 9096,  "dir": "down" },
-                { "label": "외국인",   "value": "−4,435",  "magnitude": 4435,  "dir": "down" },
-                { "label": "개인",     "value": "−1,917",  "magnitude": 1917,  "dir": "down" }
+                {
+                  "label": "기타법인",
+                  "value": "+15,433",
+                  "magnitude": 15433,
+                  "dir": "up"
+                },
+                {
+                  "label": "기관",
+                  "value": "−9,096",
+                  "magnitude": 9096,
+                  "dir": "down"
+                },
+                {
+                  "label": "외국인",
+                  "value": "−4,435",
+                  "magnitude": 4435,
+                  "dir": "down"
+                },
+                {
+                  "label": "개인",
+                  "value": "−1,917",
+                  "magnitude": 1917,
+                  "dir": "down"
+                }
               ]
             },
             {
@@ -70,7 +158,10 @@
               "word": "기타법인",
               "desc": "금융투자·연기금·외국인·개인을 뺀 일반 법인. 자사주 매입이 이 항목으로 잡혀, 금액이 크면 “회사가 자기 주식을 샀다”는 신호일 때가 많습니다."
             },
-            { "type": "caption", "text": "출처 · 머니투데이 · SBS Biz · 노컷뉴스 · 전자신문" }
+            {
+              "type": "caption",
+              "text": "출처 · 머니투데이 · SBS Biz · 노컷뉴스 · 전자신문"
+            }
           ]
         },
         {
@@ -80,10 +171,30 @@
             {
               "type": "stats",
               "items": [
-                { "label": "다우존스",  "value": "53,185.90", "delta": "▼ 0.70%",  "dir": "down" },
-                { "label": "S&P 500",  "value": "7,686.14",  "delta": "▼ 0.33%",  "dir": "down" },
-                { "label": "나스닥",    "value": "26,370.89", "delta": "▼ 0.12%",  "dir": "down" },
-                { "label": "WTI 유가",  "value": "$85.76",    "delta": "▲ 2.83%",  "dir": "up" }
+                {
+                  "label": "다우존스",
+                  "value": "53,185.90",
+                  "delta": "▼ 0.70%",
+                  "dir": "down"
+                },
+                {
+                  "label": "S&P 500",
+                  "value": "7,686.14",
+                  "delta": "▼ 0.33%",
+                  "dir": "down"
+                },
+                {
+                  "label": "나스닥",
+                  "value": "26,370.89",
+                  "delta": "▼ 0.12%",
+                  "dir": "down"
+                },
+                {
+                  "label": "WTI 유가",
+                  "value": "$85.76",
+                  "delta": "▲ 2.83%",
+                  "dir": "up"
+                }
               ]
             },
             {
@@ -97,7 +208,10 @@
                 "S&P 500 <b class=\"up\">+2.6%</b> · 나스닥 <b class=\"up\">+3.9%</b> — 둘 다 지난 5월 이후 최대 상승폭"
               ]
             },
-            { "type": "caption", "text": "출처 · 연합뉴스 · 한국경제 · 문화일보 · 조선일보" }
+            {
+              "type": "caption",
+              "text": "출처 · 연합뉴스 · 한국경제 · 문화일보 · 조선일보"
+            }
           ]
         },
         {
@@ -107,16 +221,34 @@
             {
               "type": "stats",
               "items": [
-                { "label": "원/달러 (주간거래)", "value": "1,368.6", "delta": "▼ 3.9원",  "dir": "down" },
-                { "label": "미 10년물 국채",     "value": "4.752%",  "delta": "▲ 3.1bp", "dir": "up" },
-                { "label": "WTI 유가",          "value": "$85.76",  "delta": "▲ 2.83%", "dir": "up" }
+                {
+                  "label": "원/달러 (주간거래)",
+                  "value": "1,368.6",
+                  "delta": "▼ 3.9원",
+                  "dir": "down"
+                },
+                {
+                  "label": "미 10년물 국채",
+                  "value": "4.752%",
+                  "delta": "▲ 3.1bp",
+                  "dir": "up"
+                },
+                {
+                  "label": "WTI 유가",
+                  "value": "$85.76",
+                  "delta": "▲ 2.83%",
+                  "dir": "up"
+                }
               ]
             },
             {
               "type": "p",
               "text": "원/달러 환율은 전 거래일보다 3.9원 내린 1,368.6원에 주간거래를 마쳤습니다. 지난 7월 8일 이후 약 <b>13개월 만</b>에 1360원대로 내려온 것으로, 달러 약세와 외국인 수급이 맞물린 결과로 풀이됩니다. 국내 증시에서는 SK이노베이션 등 정유주가 강세를 보였습니다."
             },
-            { "type": "caption", "text": "출처 · 머니투데이 · 뉴스토마토 · 디지털데일리" }
+            {
+              "type": "caption",
+              "text": "출처 · 머니투데이 · 뉴스토마토 · 디지털데일리"
+            }
           ]
         }
       ],
@@ -126,22 +258,45 @@
         "<b>유의</b> 시장 상황 정리용 자료이며 투자 권유가 아닙니다. 매매 판단과 그 결과는 투자자 본인에게 귀속됩니다."
       ]
     },
-
     {
       "id": "news",
       "kicker": "Daily Economic Brief",
       "title": "오늘의 경제",
       "subtitle": "한국 경제신문 보도를 원문까지 확인해 정리했습니다",
-      "stamp": ["2026. 09. 01 (화) 조간", "시장 수치 · 8월 31일 (월) 마감", "이슈 5 · 미 증시 · 용어 6"],
+      "stamp": [
+        "2026. 09. 01 (화) 조간",
+        "시장 수치 · 8월 31일 (월) 마감",
+        "이슈 5 · 미 증시 · 용어 6"
+      ],
       "hero": {
         "tier": "오늘의 한 줄",
         "headline": "3%대로 급락하던 코스피, 자사주가 되살렸다",
         "lead": "워시 미 연준 의장의 금리 인상 시사와 미·이란 충돌에 장 초반 3% 넘게 밀렸지만, 삼성전자·SK하이닉스의 자사주 매입 소식이 전해지며 오후 들어 상승 전환했습니다. 코스닥은 0.49% 내렸습니다.",
         "kpis": [
-          { "label": "코스피",            "value": "6,820.02", "delta": "+0.46%", "dir": "up" },
-          { "label": "원/달러 (주간거래)", "value": "1,368.6",  "delta": "−3.9원", "dir": "down" },
-          { "label": "미 10년물 국채",     "value": "4.752%",   "delta": "+3.1bp", "dir": "up" },
-          { "label": "WTI 유가",          "value": "$85.76",   "delta": "+2.83%", "dir": "up" }
+          {
+            "label": "코스피",
+            "value": "6,820.02",
+            "delta": "+0.46%",
+            "dir": "up"
+          },
+          {
+            "label": "원/달러 (주간거래)",
+            "value": "1,368.6",
+            "delta": "−3.9원",
+            "dir": "down"
+          },
+          {
+            "label": "미 10년물 국채",
+            "value": "4.752%",
+            "delta": "+3.1bp",
+            "dir": "up"
+          },
+          {
+            "label": "WTI 유가",
+            "value": "$85.76",
+            "delta": "+2.83%",
+            "dir": "up"
+          }
         ]
       },
       "sections": [
@@ -169,10 +324,30 @@
               "type": "hbar",
               "caption": "8/31 투자주체별 순매수 (억원)",
               "rows": [
-                { "label": "기타법인", "value": "+15,433", "magnitude": 15433, "dir": "up" },
-                { "label": "기관",     "value": "−9,096",  "magnitude": 9096,  "dir": "down" },
-                { "label": "외국인",   "value": "−4,435",  "magnitude": 4435,  "dir": "down" },
-                { "label": "개인",     "value": "−1,917",  "magnitude": 1917,  "dir": "down" }
+                {
+                  "label": "기타법인",
+                  "value": "+15,433",
+                  "magnitude": 15433,
+                  "dir": "up"
+                },
+                {
+                  "label": "기관",
+                  "value": "−9,096",
+                  "magnitude": 9096,
+                  "dir": "down"
+                },
+                {
+                  "label": "외국인",
+                  "value": "−4,435",
+                  "magnitude": 4435,
+                  "dir": "down"
+                },
+                {
+                  "label": "개인",
+                  "value": "−1,917",
+                  "magnitude": 1917,
+                  "dir": "down"
+                }
               ]
             },
             {
@@ -180,8 +355,16 @@
               "word": "기타법인",
               "desc": "금융투자·연기금·외국인·개인을 뺀 일반 법인. 자사주 매입이 이 항목으로 잡혀, 금액이 크면 “회사가 자기 주식을 샀다”는 신호일 때가 많습니다."
             },
-            { "type": "caption", "text": "출처 · 머니투데이 · SBS Biz · 노컷뉴스" }
-          ]
+            {
+              "type": "caption",
+              "text": "출처 · 머니투데이 · SBS Biz · 노컷뉴스"
+            }
+          ],
+          "image": {
+            "src": "photos/krw-cash.jpg",
+            "alt": "한국 만원권 지폐",
+            "caption": "기타법인이 홀로 1조 5,433억을 순매수했다."
+          }
         },
         {
           "style": "card",
@@ -203,10 +386,30 @@
               "type": "hbar",
               "caption": "8/31 자산별 등락률",
               "rows": [
-                { "label": "WTI 유가",  "value": "+2.83%", "magnitude": 2.83, "dir": "up" },
-                { "label": "다우존스",  "value": "−0.70%", "magnitude": 0.70, "dir": "down" },
-                { "label": "S&P 500",  "value": "−0.33%", "magnitude": 0.33, "dir": "down" },
-                { "label": "나스닥",    "value": "−0.12%", "magnitude": 0.12, "dir": "down" }
+                {
+                  "label": "WTI 유가",
+                  "value": "+2.83%",
+                  "magnitude": 2.83,
+                  "dir": "up"
+                },
+                {
+                  "label": "다우존스",
+                  "value": "−0.70%",
+                  "magnitude": 0.7,
+                  "dir": "down"
+                },
+                {
+                  "label": "S&P 500",
+                  "value": "−0.33%",
+                  "magnitude": 0.33,
+                  "dir": "down"
+                },
+                {
+                  "label": "나스닥",
+                  "value": "−0.12%",
+                  "magnitude": 0.12,
+                  "dir": "down"
+                }
               ]
             },
             {
@@ -214,8 +417,16 @@
               "word": "호르무즈 해협",
               "desc": "이란과 오만 사이의 좁은 바닷길. 전 세계 해상 원유 수송의 상당량이 이곳을 지나기 때문에, 긴장이 높아지면 유가가 즉시 반응합니다."
             },
-            { "type": "caption", "text": "출처 · 조선비즈 · 연합뉴스 · 한국경제 · 서울경제" }
-          ]
+            {
+              "type": "caption",
+              "text": "출처 · 조선비즈 · 연합뉴스 · 한국경제 · 서울경제"
+            }
+          ],
+          "image": {
+            "src": "photos/oil.jpg",
+            "alt": "원유 채굴 현장",
+            "caption": "미·이란 교전 재개로 WTI 가 2.83% 올랐다."
+          }
         },
         {
           "style": "card",
@@ -238,8 +449,19 @@
               "type": "hbar",
               "caption": "전용 84㎡ 최고가 20억 초과 지역 수",
               "rows": [
-                { "label": "올해",   "value": "21곳", "magnitude": 21, "accent": "c2" },
-                { "label": "지난해", "value": "16곳", "magnitude": 16, "accent": "c2", "fade": 0.6 }
+                {
+                  "label": "올해",
+                  "value": "21곳",
+                  "magnitude": 21,
+                  "accent": "c2"
+                },
+                {
+                  "label": "지난해",
+                  "value": "16곳",
+                  "magnitude": 16,
+                  "accent": "c2",
+                  "fade": 0.6
+                }
               ]
             },
             {
@@ -247,8 +469,16 @@
               "word": "국민평형",
               "desc": "전용면적 84㎡(약 33~34평형). 한국에서 가장 대중적인 아파트 크기라 지역별 집값을 비교하는 기준으로 쓰입니다."
             },
-            { "type": "caption", "text": "출처 · 서울경제 · 한국경제 (국토교통부 실거래가)" }
-          ]
+            {
+              "type": "caption",
+              "text": "출처 · 서울경제 · 한국경제 (국토교통부 실거래가)"
+            }
+          ],
+          "image": {
+            "src": "photos/apartment.jpg",
+            "alt": "서울 시내 고층 아파트 단지",
+            "caption": "전용 84㎡ 최고가가 20억을 넘긴 수도권 지역이 21곳으로 늘었다."
+          }
         },
         {
           "style": "card",
@@ -270,9 +500,26 @@
               "type": "hbar",
               "caption": "제품별 알코올 도수 — 기준 14.5도",
               "rows": [
-                { "label": "처음처럼 (기존)",    "value": "16.0도", "pct": 100,  "accent": "c1", "fade": 0.55 },
-                { "label": "처음처럼 (변경 후)", "value": "15.7도", "pct": 80,   "accent": "c1", "fade": 0.75 },
-                { "label": "찰랑 (오비맥주)",    "value": "15.0도", "pct": 33.3, "accent": "c1" }
+                {
+                  "label": "처음처럼 (기존)",
+                  "value": "16.0도",
+                  "pct": 100,
+                  "accent": "c1",
+                  "fade": 0.55
+                },
+                {
+                  "label": "처음처럼 (변경 후)",
+                  "value": "15.7도",
+                  "pct": 80,
+                  "accent": "c1",
+                  "fade": 0.75
+                },
+                {
+                  "label": "찰랑 (오비맥주)",
+                  "value": "15.0도",
+                  "pct": 33.3,
+                  "accent": "c1"
+                }
               ]
             },
             {
@@ -280,8 +527,16 @@
               "word": "Low-ABV (저도주)",
               "desc": "알코올 도수를 낮춘 술. 술을 덜 마시거나 가볍게 마시려는 소비가 늘면서, 주류 업계가 0.1도 단위로 경쟁하는 전장이 됐습니다."
             },
-            { "type": "caption", "text": "출처 · 한국경제 · 메가경제 (국세청 출고량 자료)" }
-          ]
+            {
+              "type": "caption",
+              "text": "출처 · 한국경제 · 메가경제 (국세청 출고량 자료)"
+            }
+          ],
+          "image": {
+            "src": "photos/soju.jpg",
+            "alt": "진열된 소주병들",
+            "caption": "출고량은 줄었는데 도수 경쟁은 더 뜨거워졌다."
+          }
         },
         {
           "style": "card",
@@ -302,9 +557,19 @@
             {
               "type": "timeline",
               "items": [
-                { "when": "8. 30", "what": "6개 부처 개각 — 정책실장은 유임" },
-                { "when": "8. 31", "what": "김용범 정책실장 사의 표명" },
-                { "when": "9. 1",  "what": "대통령 사표 수리 · 후임 미정", "done": true }
+                {
+                  "when": "8. 30",
+                  "what": "6개 부처 개각 — 정책실장은 유임"
+                },
+                {
+                  "when": "8. 31",
+                  "what": "김용범 정책실장 사의 표명"
+                },
+                {
+                  "when": "9. 1",
+                  "what": "대통령 사표 수리 · 후임 미정",
+                  "done": true
+                }
               ]
             },
             {
@@ -312,19 +577,53 @@
               "word": "정책실장",
               "desc": "대통령실에서 경제·사회 정책 전반을 조율하는 최고 참모직. 부처를 가로지르는 정책의 방향을 정하기 때문에 ‘경제 컨트롤타워’로 불립니다."
             },
-            { "type": "caption", "text": "출처 · 연합뉴스TV · KBS · MBC · 문화일보" }
-          ]
+            {
+              "type": "caption",
+              "text": "출처 · 연합뉴스TV · KBS · MBC · 문화일보"
+            }
+          ],
+          "image": {
+            "src": "photos/bluehouse.jpg",
+            "alt": "청와대 본관 전경",
+            "caption": "김용범 정책실장이 재임 15개월 만에 물러났다."
+          }
         },
         {
           "title": "미국 증시 — 8월 31일 (월) 마감",
           "blocks": [
             {
+              "type": "photo",
+              "src": "photos/nyse.jpg",
+              "alt": "뉴욕증권거래소 건물 외관",
+              "caption": "미·이란 교전 재개와 유가 급등에 3대 지수가 일제히 내렸다."
+            },
+            {
               "type": "stats",
               "items": [
-                { "label": "다우존스",  "value": "53,185.90", "delta": "−0.70%", "dir": "down" },
-                { "label": "S&P 500",  "value": "7,686.14",  "delta": "−0.33%", "dir": "down" },
-                { "label": "나스닥",    "value": "26,370.89", "delta": "−0.12%", "dir": "down" },
-                { "label": "WTI 유가",  "value": "$85.76",    "delta": "+2.83%", "dir": "up" }
+                {
+                  "label": "다우존스",
+                  "value": "53,185.90",
+                  "delta": "−0.70%",
+                  "dir": "down"
+                },
+                {
+                  "label": "S&P 500",
+                  "value": "7,686.14",
+                  "delta": "−0.33%",
+                  "dir": "down"
+                },
+                {
+                  "label": "나스닥",
+                  "value": "26,370.89",
+                  "delta": "−0.12%",
+                  "dir": "down"
+                },
+                {
+                  "label": "WTI 유가",
+                  "value": "$85.76",
+                  "delta": "+2.83%",
+                  "dir": "up"
+                }
               ]
             },
             {
@@ -343,12 +642,36 @@
             {
               "type": "terms",
               "items": [
-                { "word": "기타법인",         "accent": "c4", "desc": "금융투자·연기금·외국인·개인을 뺀 일반 법인. 자사주 매입이 이 항목으로 잡힙니다." },
-                { "word": "매파 (Hawk)",      "accent": "c4", "desc": "물가를 잡기 위해 금리 인상을 선호하는 성향. 반대는 비둘기파(Dove)." },
-                { "word": "호르무즈 해협",    "accent": "c3", "desc": "이란과 오만 사이의 좁은 바닷길. 세계 해상 원유가 지나는 길목이라 긴장이 곧 유가로 옮겨붙습니다." },
-                { "word": "bp (베이시스포인트)", "accent": "c3", "desc": "금리를 재는 단위. 1bp = 0.01%p. “+3.1bp”는 0.031%p 올랐다는 뜻입니다." },
-                { "word": "국민평형",         "accent": "c2", "desc": "전용면적 84㎡(약 33~34평형). 한국에서 가장 대중적인 아파트 크기." },
-                { "word": "Low-ABV (저도주)", "accent": "c1", "desc": "도수를 낮춘 술. 주류 업계가 0.1도 단위로 다투는 새 전장." }
+                {
+                  "word": "기타법인",
+                  "accent": "c4",
+                  "desc": "금융투자·연기금·외국인·개인을 뺀 일반 법인. 자사주 매입이 이 항목으로 잡힙니다."
+                },
+                {
+                  "word": "매파 (Hawk)",
+                  "accent": "c4",
+                  "desc": "물가를 잡기 위해 금리 인상을 선호하는 성향. 반대는 비둘기파(Dove)."
+                },
+                {
+                  "word": "호르무즈 해협",
+                  "accent": "c3",
+                  "desc": "이란과 오만 사이의 좁은 바닷길. 세계 해상 원유가 지나는 길목이라 긴장이 곧 유가로 옮겨붙습니다."
+                },
+                {
+                  "word": "bp (베이시스포인트)",
+                  "accent": "c3",
+                  "desc": "금리를 재는 단위. 1bp = 0.01%p. “+3.1bp”는 0.031%p 올랐다는 뜻입니다."
+                },
+                {
+                  "word": "국민평형",
+                  "accent": "c2",
+                  "desc": "전용면적 84㎡(약 33~34평형). 한국에서 가장 대중적인 아파트 크기."
+                },
+                {
+                  "word": "Low-ABV (저도주)",
+                  "accent": "c1",
+                  "desc": "도수를 낮춘 술. 주류 업계가 0.1도 단위로 다투는 새 전장."
+                }
               ]
             }
           ]

@@ -4,9 +4,10 @@
    셸 파일을 고치면 SHELL_VERSION 을 올려 주세요.
    ───────────────────────────────────────────────────────────── */
 
-var SHELL_VERSION = 'shell-v2';
+var SHELL_VERSION = 'shell-v3';
 var DATA_CACHE = 'data-v1';
 var FONT_CACHE = 'font-v1';
+var PHOTO_CACHE = 'photo-v1';
 
 var SHELL = [
   './',
@@ -34,7 +35,7 @@ self.addEventListener('install', function (e) {
 });
 
 self.addEventListener('activate', function (e) {
-  var keep = [SHELL_VERSION, DATA_CACHE, FONT_CACHE];
+  var keep = [SHELL_VERSION, DATA_CACHE, FONT_CACHE, PHOTO_CACHE];
   e.waitUntil(
     caches.keys()
       .then(function (keys) {
@@ -93,6 +94,21 @@ self.addEventListener('fetch', function (e) {
   // APK 내려받기는 서비스 워커가 건드리지 않는다.
   // (캐시에 1MB 를 쌓을 이유도 없고, 오프라인 폴백이 index.html 을 돌려주면 안 된다)
   if (url.pathname.endsWith('.apk')) return;
+
+  // 사진 — 한 번 받으면 계속 쓴다 (파일명이 곧 버전이라 갱신할 필요가 없다)
+  if (url.pathname.indexOf('/photos/') > -1 && !url.pathname.endsWith('.json')) {
+    e.respondWith(
+      caches.open(PHOTO_CACHE).then(function (cache) {
+        return cache.match(req).then(function (hit) {
+          return hit || fetch(req).then(function (res) {
+            if (res && res.ok) cache.put(req, res.clone());
+            return res;
+          });
+        });
+      })
+    );
+    return;
+  }
 
   // 브리핑 데이터 — 항상 최신을 먼저 시도
   if (url.pathname.indexOf('/data/') > -1) {

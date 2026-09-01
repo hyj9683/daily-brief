@@ -226,6 +226,27 @@ ul.blk li::before{
 .term b{ display:block; color:var(--ink); margin-bottom:2px; }
 .cap{ font-size:11px; color:var(--faint); margin:0; }
 
+/* 사진 */
+.photo{ margin:0 0 13px; }
+.photo img{
+  display:block; width:100%; height:auto; object-fit:cover;
+  border-radius:10px; border:1px solid var(--line);
+  background:var(--surface-2);
+  filter:saturate(.94) contrast(1.02);
+  aspect-ratio:3/2;
+}
+:root[data-theme="dark"] .photo img{ filter:saturate(.9) contrast(1.02) brightness(.92); }
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]) .photo img{ filter:saturate(.9) contrast(1.02) brightness(.92); }
+}
+.photo figcaption{
+  font-size:11px; color:var(--faint); line-height:1.55; margin-top:6px;
+}
+/* 카드 안에서는 본문 폭을 꽉 채워 신문 사진처럼 */
+.photo-card img{ aspect-ratio:16/10; }
+.photo-hero img{ aspect-ratio:16/9; border-radius:12px; }
+.photo-hero{ margin:12px 0 14px; }
+
 /* 통계 타일 */
 .stats{ display:grid; grid-template-columns:repeat(2,1fr); gap:8px; }
 .stat{ background:var(--surface-2); border-radius:11px; padding:10px 11px; }

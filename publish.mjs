@@ -56,7 +56,7 @@ for (const need of ['market', 'news']) {
   if (!ids.includes(need)) console.warn(`  ! 탭 "${need}" 이(가) 없습니다 — 앱에서 빈 화면으로 보입니다.`);
 }
 
-const KNOWN = new Set(['p', 'bullets', 'callout', 'kpis', 'stats', 'table', 'hbar', 'timeline', 'terms', 'term', 'caption']);
+const KNOWN = new Set(['p', 'bullets', 'callout', 'kpis', 'stats', 'table', 'hbar', 'timeline', 'terms', 'term', 'caption', 'photo']);
 let blocks = 0;
 for (const tab of payload.tabs) {
   for (const sec of tab.sections || []) {
@@ -67,6 +67,23 @@ for (const tab of payload.tabs) {
   }
 }
 ok(`검사 통과 — ${payload.date} · 탭 ${payload.tabs.length}개 · 블록 ${blocks}개`);
+
+// 참조한 사진 파일이 실제로 있는지 확인 — 없으면 앱에서 조용히 사라진다
+const photos = new Set();
+const collect = (o) => {
+  if (!o || typeof o !== 'object') return;
+  if (Array.isArray(o)) return o.forEach(collect);
+  if (typeof o.src === 'string' && o.src.startsWith('photos/')) photos.add(o.src);
+  Object.values(o).forEach(collect);
+};
+collect(payload);
+let missing = 0;
+for (const src of photos) {
+  if (!existsSync(join(ROOT, src))) { console.warn(`  ! 사진 파일이 없습니다: ${src}`); missing++; }
+}
+if (photos.size) ok(`사진 ${photos.size}장 참조${missing ? ` (${missing}장 누락!)` : ' — 모두 존재'}`);
+
+
 
 /* ── 3. 지난 호로 보관 ────────────────────────────────────── */
 if (!existsSync(ARCHIVE)) mkdirSync(ARCHIVE, { recursive: true });

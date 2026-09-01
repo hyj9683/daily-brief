@@ -93,7 +93,12 @@
             "delta": "+2.83%",
             "dir": "up"
           }
-        ]
+        ],
+        "image": {
+          "src": "photos/semiconductor.jpg",
+          "alt": "반도체 웨이퍼 클로즈업",
+          "caption": "삼성전자·SK하이닉스 자사주 매입이 지수를 되돌렸다."
+        }
       },
       "sections": [
         {
@@ -354,7 +359,12 @@
               "type": "caption",
               "text": "출처 · 머니투데이 · SBS Biz · 노컷뉴스"
             }
-          ]
+          ],
+          "image": {
+            "src": "photos/krw-cash.jpg",
+            "alt": "한국 만원권 지폐",
+            "caption": "기타법인이 홀로 1조 5,433억을 순매수했다."
+          }
         },
         {
           "style": "card",
@@ -411,7 +421,12 @@
               "type": "caption",
               "text": "출처 · 조선비즈 · 연합뉴스 · 한국경제 · 서울경제"
             }
-          ]
+          ],
+          "image": {
+            "src": "photos/oil.jpg",
+            "alt": "원유 채굴 현장",
+            "caption": "미·이란 교전 재개로 WTI 가 2.83% 올랐다."
+          }
         },
         {
           "style": "card",
@@ -458,7 +473,12 @@
               "type": "caption",
               "text": "출처 · 서울경제 · 한국경제 (국토교통부 실거래가)"
             }
-          ]
+          ],
+          "image": {
+            "src": "photos/apartment.jpg",
+            "alt": "서울 시내 고층 아파트 단지",
+            "caption": "전용 84㎡ 최고가가 20억을 넘긴 수도권 지역이 21곳으로 늘었다."
+          }
         },
         {
           "style": "card",
@@ -511,7 +531,12 @@
               "type": "caption",
               "text": "출처 · 한국경제 · 메가경제 (국세청 출고량 자료)"
             }
-          ]
+          ],
+          "image": {
+            "src": "photos/soju.jpg",
+            "alt": "진열된 소주병들",
+            "caption": "출고량은 줄었는데 도수 경쟁은 더 뜨거워졌다."
+          }
         },
         {
           "style": "card",
@@ -556,11 +581,22 @@
               "type": "caption",
               "text": "출처 · 연합뉴스TV · KBS · MBC · 문화일보"
             }
-          ]
+          ],
+          "image": {
+            "src": "photos/bluehouse.jpg",
+            "alt": "청와대 본관 전경",
+            "caption": "김용범 정책실장이 재임 15개월 만에 물러났다."
+          }
         },
         {
           "title": "미국 증시 — 8월 31일 (월) 마감",
           "blocks": [
+            {
+              "type": "photo",
+              "src": "photos/nyse.jpg",
+              "alt": "뉴욕증권거래소 건물 외관",
+              "caption": "미·이란 교전 재개와 유가 급등에 3대 지수가 일제히 내렸다."
+            },
             {
               "type": "stats",
               "items": [

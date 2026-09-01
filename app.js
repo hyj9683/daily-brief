@@ -190,8 +190,28 @@
 
     caption: function (b) {
       return el('p', 'blk cap', b.text);
+    },
+
+    photo: function (b) {
+      return photoFigure(b);
     }
   };
+
+  /* 사진 — photos/ 라이브러리의 이미지를 캡션과 함께 보여준다 */
+  function photoFigure(spec, cls) {
+    if (!spec || !spec.src) return null;
+    var fig = el('figure', 'blk photo' + (cls ? ' ' + cls : ''));
+    var img = document.createElement('img');
+    img.src = spec.src;
+    img.alt = spec.alt || '';
+    img.loading = 'lazy';
+    img.decoding = 'async';
+    // 파일이 없어도 레이아웃이 깨지지 않게 통째로 걷어낸다
+    img.addEventListener('error', function () { fig.remove(); });
+    fig.appendChild(img);
+    if (spec.caption) fig.appendChild(el('figcaption', null, spec.caption));
+    return fig;
+  }
 
   function renderBlocks(host, blocks) {
     (blocks || []).forEach(function (b) {
@@ -235,6 +255,10 @@
       var hero = el('div', 'hero');
       if (tab.hero.tier) hero.appendChild(el('div', 'tier', tab.hero.tier));
       if (tab.hero.headline) hero.appendChild(rich(el('h2'), tab.hero.headline));
+      if (tab.hero.image) {
+        var heroFig = photoFigure(tab.hero.image, 'photo-hero');
+        if (heroFig) hero.appendChild(heroFig);
+      }
       if (tab.hero.lead) hero.appendChild(rich(el('p'), tab.hero.lead));
       if (tab.hero.kpis && tab.hero.kpis.length) {
         hero.appendChild(BLOCK.kpis({ items: tab.hero.kpis }));
@@ -276,6 +300,10 @@
       body.appendChild(row);
     }
     if (sec.title) body.appendChild(rich(el('h4'), sec.title));
+    if (sec.image) {
+      var fig = photoFigure(sec.image, 'photo-card');
+      if (fig) body.appendChild(fig);
+    }
     renderBlocks(body, sec.blocks);
     art.appendChild(body);
     return art;
