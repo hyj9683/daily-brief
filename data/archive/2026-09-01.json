@@ -7,9 +7,9 @@
   "tabs": [
     {
       "id": "market",
-      "kicker": "Market Board",
+      "kicker": "Stocks",
       "title": "시황판",
-      "subtitle": "한국·미국 증시 마감 시황을 한 화면에 정리했습니다",
+      "subtitle": "한국·미국 증시와 수급·환율을 숫자로",
       "stamp": [
         "2026. 09. 01 (화) 조간",
         "국내·미국 8월 31일 (월) 마감"
@@ -261,118 +261,29 @@
     },
     {
       "id": "news",
-      "kicker": "Daily Economic Brief",
+      "kicker": "Economy",
       "title": "오늘의 경제",
-      "subtitle": "한국 경제신문 보도를 원문까지 확인해 정리했습니다",
+      "subtitle": "증시 밖 경제 소식 — 정책·부동산·산업·글로벌",
       "stamp": [
         "2026. 09. 01 (화) 조간",
-        "시장 수치 · 8월 31일 (월) 마감",
-        "이슈 5 · 미 증시 · 용어 6"
+        "이슈 4 · 용어 6"
       ],
       "hero": {
-        "tier": "오늘의 한 줄",
-        "headline": "3%대로 급락하던 코스피, 자사주가 되살렸다",
-        "lead": "워시 미 연준 의장의 금리 인상 시사와 미·이란 충돌에 장 초반 3% 넘게 밀렸지만, 삼성전자·SK하이닉스의 자사주 매입 소식이 전해지며 오후 들어 상승 전환했습니다. 코스닥은 0.49% 내렸습니다.",
-        "kpis": [
-          {
-            "label": "코스피",
-            "value": "6,820.02",
-            "delta": "+0.46%",
-            "dir": "up"
-          },
-          {
-            "label": "원/달러 (주간거래)",
-            "value": "1,368.6",
-            "delta": "−3.9원",
-            "dir": "down"
-          },
-          {
-            "label": "미 10년물 국채",
-            "value": "4.752%",
-            "delta": "+3.1bp",
-            "dir": "up"
-          },
-          {
-            "label": "WTI 유가",
-            "value": "$85.76",
-            "delta": "+2.83%",
-            "dir": "up"
-          }
-        ]
+        "tier": "오늘의 경제 한 줄",
+        "headline": "경제 사령탑이 하루 만에 물러났다",
+        "lead": "김용범 청와대 정책실장이 8월 31일 사의를 표명하고 <b>하루 만에</b> 사표가 수리됐습니다. 전날 6개 부처 개각에서는 교체 대상이 아니었던 터라 더 갑작스러웠습니다. 이 밖에 미·이란 교전 재개로 <b>유가가 2.83% 급등</b>했고, 수도권에서 전용 84㎡가 20억을 넘긴 지역이 <b>21곳</b>으로 늘었습니다."
       },
       "sections": [
         {
-          "title": "오늘의 이슈 5",
+          "title": "오늘의 이슈 4",
           "note": "색은 분야를 뜻합니다",
           "blocks": []
         },
         {
           "style": "card",
-          "accent": "c4",
-          "tag": "금융 · 증권",
-          "no": "ISSUE 01",
-          "title": "3대 주체가 다 팔았는데 지수는 올랐다",
-          "blocks": [
-            {
-              "type": "bullets",
-              "items": [
-                "개인 <b class=\"down\">−1,917억</b> · 외국인 <b class=\"down\">−4,435억</b> · 기관 <b class=\"down\">−9,096억</b> 동반 순매도",
-                "기타법인이 홀로 <b class=\"up\">+1조 5,433억</b> 순매수 — <b>삼성전자·SK하이닉스 자사주 매입</b>이 반등을 이끔",
-                "기타법인은 <b>7거래일 연속</b> 하루 1조원 이상 순매수를 이어가는 중"
-              ]
-            },
-            {
-              "type": "hbar",
-              "caption": "8/31 투자주체별 순매수 (억원)",
-              "rows": [
-                {
-                  "label": "기타법인",
-                  "value": "+15,433",
-                  "magnitude": 15433,
-                  "dir": "up"
-                },
-                {
-                  "label": "기관",
-                  "value": "−9,096",
-                  "magnitude": 9096,
-                  "dir": "down"
-                },
-                {
-                  "label": "외국인",
-                  "value": "−4,435",
-                  "magnitude": 4435,
-                  "dir": "down"
-                },
-                {
-                  "label": "개인",
-                  "value": "−1,917",
-                  "magnitude": 1917,
-                  "dir": "down"
-                }
-              ]
-            },
-            {
-              "type": "term",
-              "word": "기타법인",
-              "desc": "금융투자·연기금·외국인·개인을 뺀 일반 법인. 자사주 매입이 이 항목으로 잡혀, 금액이 크면 “회사가 자기 주식을 샀다”는 신호일 때가 많습니다."
-            },
-            {
-              "type": "caption",
-              "text": "출처 · 머니투데이 · SBS Biz · 노컷뉴스"
-            }
-          ],
-          "image": {
-            "src": "photos/krw-cash.jpg",
-            "alt": "한국 만원권 지폐",
-            "caption": "기타법인이 홀로 1조 5,433억을 순매수했다.",
-            "credit": "The Bank of Korea한국은행 / Wikimedia Commons · South Korean currency"
-          }
-        },
-        {
-          "style": "card",
           "accent": "c3",
           "tag": "글로벌 · 유가",
-          "no": "ISSUE 02",
+          "no": "ISSUE 01",
           "title": "미·이란 한 달 만의 교전 재개, 유가가 먼저 반응",
           "blocks": [
             {
@@ -435,7 +346,7 @@
           "style": "card",
           "accent": "c2",
           "tag": "부동산",
-          "no": "ISSUE 03",
+          "no": "ISSUE 02",
           "title": "‘국민평형 20억’ 수도권 21곳으로 늘었다",
           "blocks": [
             {
@@ -488,7 +399,7 @@
           "style": "card",
           "accent": "c1",
           "tag": "산업 · 소비",
-          "no": "ISSUE 04",
+          "no": "ISSUE 03",
           "title": "소주는 덜 팔리는데, 도수 경쟁은 더 뜨겁다",
           "blocks": [
             {
@@ -547,7 +458,7 @@
           "style": "card",
           "accent": "c5",
           "tag": "정책",
-          "no": "ISSUE 05",
+          "no": "ISSUE 04",
           "title": "경제 사령탑이 하루 만에 물러났다",
           "blocks": [
             {
@@ -593,55 +504,6 @@
             "caption": "김용범 정책실장이 재임 15개월 만에 물러났다.",
             "credit": "Youngjin / Wikimedia Commons · CC BY-SA 4.0"
           }
-        },
-        {
-          "title": "미국 증시 — 8월 31일 (월) 마감",
-          "blocks": [
-            {
-              "type": "photo",
-              "src": "photos/nyse.jpg",
-              "alt": "뉴욕증권거래소 건물 외관",
-              "caption": "미·이란 교전 재개와 유가 급등에 3대 지수가 일제히 내렸다.",
-              "credit": "Giorgio Galeotti / Wikimedia Commons · CC BY 3.0"
-            },
-            {
-              "type": "stats",
-              "items": [
-                {
-                  "label": "다우존스",
-                  "value": "53,185.90",
-                  "delta": "−0.70%",
-                  "dir": "down"
-                },
-                {
-                  "label": "S&P 500",
-                  "value": "7,686.14",
-                  "delta": "−0.33%",
-                  "dir": "down"
-                },
-                {
-                  "label": "나스닥",
-                  "value": "26,370.89",
-                  "delta": "−0.12%",
-                  "dir": "down"
-                },
-                {
-                  "label": "WTI 유가",
-                  "value": "$85.76",
-                  "delta": "+2.83%",
-                  "dir": "up"
-                }
-              ]
-            },
-            {
-              "type": "bullets",
-              "items": [
-                "<b>하락 이유</b> — 미·이란 교전 재개와 유가 급등, 국채금리 상승",
-                "<b>8월 한 달로 보면</b> — 다우 <b class=\"up\">+1%대</b>, 5개월 연속 상승",
-                "<b>S&P 500 <span class=\"up\">+2.6%</span> · 나스닥 <span class=\"up\">+3.9%</span></b> — 지난 5월 이후 최대 상승폭"
-              ]
-            }
-          ]
         },
         {
           "title": "초보 투자자를 위한 경제 용어",
