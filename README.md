@@ -138,7 +138,26 @@ node publish.mjs 오늘원고.json --push
 `src` 는 반드시 `photos/` 로 시작하는 저장소 안의 파일이어야 합니다. 파일이 없으면 앱이 그 사진만
 조용히 걷어내고 나머지는 정상 표시하며, `publish.mjs` 가 발행 전에 누락을 경고합니다.
 
-새 주제가 필요하면 사진을 `photos/` 에 넣고 `photos/index.json` 에 키워드와 함께 등록하세요.
+`credit` 은 `photos/index.json` 에서 가져와 넣습니다. CC 라이선스 사진은 저작자·라이선스 표기가
+의무이므로 캡션 아래 작은 글씨로 반드시 함께 나가야 합니다.
+
+#### 새 사진 구하기
+
+`tools/fetch-photo.py` 가 위키미디어 공용에서 사진을 찾아 내려받고 라이선스·저작자까지 등록합니다.
+공용은 API 키가 필요 없고 전부 자유 라이선스라 재배포할 수 있습니다.
+
+```bash
+# 후보만 먼저 훑어본다
+python tools/fetch-photo.py --search "steel mill blast furnace" --list
+
+# 마음에 드는 번호로 등록 (기본 1번)
+python tools/fetch-photo.py --id steel --search "steel mill blast furnace" --pick 2     --alt "제철소의 쇳물" --keywords 철강 포스코 현대제철 조강 원자재
+```
+
+**받은 사진은 반드시 눈으로 확인하세요.** 공용 검색은 엉뚱한 걸 자주 물어옵니다 —
+"Cheong Wa Dae"(청와대)로 모로코의 파란 골목이, "soju"로 길가 공병 더미가 나온 적이 있습니다.
+주제와 맞지 않으면 `--pick` 을 바꾸거나 검색어를 다시 짜고, 그래도 안 맞으면 그 카드는 사진 없이 둡니다.
+**틀린 사진을 붙이느니 없는 편이 낫습니다.**
 
 ### 본문에 쓸 수 있는 태그
 
