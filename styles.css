@@ -242,6 +242,10 @@ ul.blk li::before{
 .photo figcaption{
   font-size:11px; color:var(--faint); line-height:1.55; margin-top:6px;
 }
+/* 사진 저작자·라이선스 표기 (CC 라이선스 의무) */
+.photo figcaption .credit{
+  display:block; margin-top:2px; font-size:10px; opacity:.75;
+}
 /* 카드 안에서는 본문 폭을 꽉 채워 신문 사진처럼 */
 .photo-card img{ aspect-ratio:16/10; }
 .photo-hero img{ aspect-ratio:16/9; border-radius:12px; }

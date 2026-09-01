@@ -4,7 +4,7 @@
    셸 파일을 고치면 SHELL_VERSION 을 올려 주세요.
    ───────────────────────────────────────────────────────────── */
 
-var SHELL_VERSION = 'shell-v3';
+var SHELL_VERSION = 'shell-v4';
 var DATA_CACHE = 'data-v1';
 var FONT_CACHE = 'font-v1';
 var PHOTO_CACHE = 'photo-v1';

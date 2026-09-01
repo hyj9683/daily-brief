@@ -209,7 +209,13 @@
     // 파일이 없어도 레이아웃이 깨지지 않게 통째로 걷어낸다
     img.addEventListener('error', function () { fig.remove(); });
     fig.appendChild(img);
-    if (spec.caption) fig.appendChild(el('figcaption', null, spec.caption));
+    if (spec.caption || spec.credit) {
+      var cap = el('figcaption');
+      if (spec.caption) cap.appendChild(document.createTextNode(spec.caption));
+      // CC 라이선스 사진은 저작자·라이선스 표기가 의무다
+      if (spec.credit) cap.appendChild(el('span', 'credit', spec.credit));
+      fig.appendChild(cap);
+    }
     return fig;
   }
 

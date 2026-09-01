@@ -2,6 +2,21 @@
   "note": "주제별 사진 라이브러리. keywords 로 그날 기사에 맞는 사진을 고른다.",
   "photos": [
     {
+      "id": "airline",
+      "file": "photos/airline.jpg",
+      "alt": "공항 계류장의 여객기",
+      "keywords": [
+        "항공",
+        "여행",
+        "인천공항",
+        "항공사",
+        "관광",
+        "유가"
+      ],
+      "credit": "shankar s. / Wikimedia Commons · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:My_bird_from_Mahe_to_Praslin_was_this_DHC6_Twin_Otter_aircraft.jpg"
+    },
+    {
       "id": "apartment",
       "file": "photos/apartment.jpg",
       "alt": "서울 시내 고층 아파트 단지",
@@ -17,6 +32,37 @@
       "width": 640,
       "height": 432,
       "kb": 44
+    },
+    {
+      "id": "auto",
+      "file": "photos/auto.jpg",
+      "alt": "충전 중인 전기차",
+      "keywords": [
+        "자동차",
+        "현대차",
+        "기아",
+        "완성차",
+        "전기차",
+        "배터리",
+        "이차전지"
+      ],
+      "credit": "Ivan Radic / Wikimedia Commons · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Close-up_of_an_electric_car_charging_station.jpg"
+    },
+    {
+      "id": "bank",
+      "file": "photos/bank.jpg",
+      "alt": "한국은행 본관",
+      "keywords": [
+        "한국은행",
+        "기준금리",
+        "통화정책",
+        "금통위",
+        "은행",
+        "대출"
+      ],
+      "credit": "Seoul Institute / Wikimedia Commons · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Chohung_Bank_Headquarters_(2000).jpg"
     },
     {
       "id": "bluehouse",
@@ -35,6 +81,32 @@
       "width": 616,
       "height": 408,
       "kb": 53
+    },
+    {
+      "id": "construct",
+      "file": "photos/construct.jpg",
+      "alt": "타워크레인이 선 건설 현장",
+      "keywords": [
+        "건설",
+        "착공",
+        "분양",
+        "시공",
+        "건설사",
+        "SOC"
+      ],
+      "credit": "Acabashi / Wikimedia Commons · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Building_construction_crane_Moira_Close_Broadwater_Farm_Haringey_2025_28.jpg"
+    },
+    {
+      "id": "gold",
+      "file": "photos/gold.jpg",
+      "alt": "금괴",
+      "keywords": [
+        "금값",
+        "금"
+      ],
+      "credit": "Stevebidmead / Wikimedia Commons · CC0",
+      "source": "https://commons.wikimedia.org/wiki/File:Gold_bullion_bars.jpg"
     },
     {
       "id": "krw-cash",
@@ -93,6 +165,37 @@
       "kb": 18
     },
     {
+      "id": "port",
+      "file": "photos/port.jpg",
+      "alt": "부산항 컨테이너 터미널",
+      "keywords": [
+        "수출",
+        "무역",
+        "항만",
+        "물류",
+        "관세",
+        "컨테이너",
+        "해운"
+      ],
+      "credit": "Martin Pueschel Eastberliner / Wikimedia Commons · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Korea_busan_pusan_harbour_cargo_container_terminal.JPG"
+    },
+    {
+      "id": "retail",
+      "file": "photos/retail.jpg",
+      "alt": "대형마트 진열대",
+      "keywords": [
+        "유통",
+        "마트",
+        "소매",
+        "소비",
+        "물가",
+        "장바구니"
+      ],
+      "credit": "USDAgov / Wikimedia Commons · Public domain",
+      "source": "https://commons.wikimedia.org/wiki/File:Agriculture_Research_Service_(ARS)_(8411827143).jpg"
+    },
+    {
       "id": "semiconductor",
       "file": "photos/semiconductor.jpg",
       "alt": "반도체 웨이퍼 클로즈업",
@@ -112,6 +215,21 @@
       "kb": 41
     },
     {
+      "id": "shipyard",
+      "file": "photos/shipyard.jpg",
+      "alt": "컨테이너선 하역",
+      "keywords": [
+        "조선",
+        "조선업",
+        "수주",
+        "선박",
+        "해운",
+        "물류"
+      ],
+      "credit": "Bahnfrend / Wikimedia Commons · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:AAL_Dampier,_Fremantle,_2020_(01).jpg"
+    },
+    {
       "id": "soju",
       "file": "photos/soju.jpg",
       "alt": "진열된 소주병들",
@@ -128,6 +246,20 @@
       "width": 640,
       "height": 428,
       "kb": 58
+    },
+    {
+      "id": "steel",
+      "file": "photos/steel.jpg",
+      "alt": "제철소의 쇳물",
+      "keywords": [
+        "철강",
+        "포스코",
+        "현대제철",
+        "조강",
+        "원자재"
+      ],
+      "credit": "Bestito / Wikimedia Commons · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Russia,_Krasnojarsk,_Norilsk_-_%D0%A8%D0%BB%D0%B0%D0%BA%D0%BE%D0%BE%D1%82%D0%B2%D0%B0%D0%BB_%D0%BD%D0%B8%D0%BA%D0%B5%D0%BB%D0%B5%D0%B2%D0%BE%D0%B3%D0%BE_%D0%B7%D0%B0%D0%B2%D0%BE%D0%B4%D0%B0_WMID4969461.jpg"
     }
   ]
 }
