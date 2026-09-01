@@ -97,7 +97,8 @@
         "image": {
           "src": "photos/semiconductor.jpg",
           "alt": "반도체 웨이퍼 클로즈업",
-          "caption": "삼성전자·SK하이닉스 자사주 매입이 지수를 되돌렸다."
+          "caption": "삼성전자·SK하이닉스 자사주 매입이 지수를 되돌렸다.",
+          "credit": "Rob Bulmahn / Wikimedia Commons · CC BY 2.0"
         }
       },
       "sections": [
@@ -363,7 +364,8 @@
           "image": {
             "src": "photos/krw-cash.jpg",
             "alt": "한국 만원권 지폐",
-            "caption": "기타법인이 홀로 1조 5,433억을 순매수했다."
+            "caption": "기타법인이 홀로 1조 5,433억을 순매수했다.",
+            "credit": "The Bank of Korea한국은행 / Wikimedia Commons · South Korean currency"
           }
         },
         {
@@ -425,7 +427,8 @@
           "image": {
             "src": "photos/oil.jpg",
             "alt": "원유 채굴 현장",
-            "caption": "미·이란 교전 재개로 WTI 가 2.83% 올랐다."
+            "caption": "미·이란 교전 재개로 WTI 가 2.83% 올랐다.",
+            "credit": "Jengod / Wikimedia Commons · CC BY-SA 4.0"
           }
         },
         {
@@ -477,7 +480,8 @@
           "image": {
             "src": "photos/apartment.jpg",
             "alt": "서울 시내 고층 아파트 단지",
-            "caption": "전용 84㎡ 최고가가 20억을 넘긴 수도권 지역이 21곳으로 늘었다."
+            "caption": "전용 84㎡ 최고가가 20억을 넘긴 수도권 지역이 21곳으로 늘었다.",
+            "credit": "kallerna / Wikimedia Commons · CC BY-SA 4.0"
           }
         },
         {
@@ -535,7 +539,8 @@
           "image": {
             "src": "photos/soju.jpg",
             "alt": "진열된 소주병들",
-            "caption": "출고량은 줄었는데 도수 경쟁은 더 뜨거워졌다."
+            "caption": "출고량은 줄었는데 도수 경쟁은 더 뜨거워졌다.",
+            "credit": "Kārlis Dambrāns / Wikimedia Commons · CC BY 2.0"
           }
         },
         {
@@ -583,9 +588,10 @@
             }
           ],
           "image": {
-            "src": "photos/bluehouse.jpg",
-            "alt": "청와대 본관 전경",
-            "caption": "김용범 정책실장이 재임 15개월 만에 물러났다."
+            "src": "photos/govt.jpg",
+            "alt": "국회의사당",
+            "caption": "김용범 정책실장이 재임 15개월 만에 물러났다.",
+            "credit": "AnbyG / Wikimedia Commons · CC BY-SA 4.0"
           }
         },
         {
@@ -595,7 +601,8 @@
               "type": "photo",
               "src": "photos/nyse.jpg",
               "alt": "뉴욕증권거래소 건물 외관",
-              "caption": "미·이란 교전 재개와 유가 급등에 3대 지수가 일제히 내렸다."
+              "caption": "미·이란 교전 재개와 유가 급등에 3대 지수가 일제히 내렸다.",
+              "credit": "Giorgio Galeotti / Wikimedia Commons · CC BY 3.0"
             },
             {
               "type": "stats",

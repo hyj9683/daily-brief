@@ -19,19 +19,17 @@
     {
       "id": "apartment",
       "file": "photos/apartment.jpg",
-      "alt": "서울 시내 고층 아파트 단지",
+      "alt": "서울 아파트 단지",
       "keywords": [
         "부동산",
         "아파트",
         "집값",
         "전세",
         "분양",
-        "주택",
-        "국토교통부"
+        "주택"
       ],
-      "width": 640,
-      "height": 432,
-      "kb": 44
+      "credit": "kallerna / Wikimedia Commons · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Lotte_World_day_view_8.jpg"
     },
     {
       "id": "auto",
@@ -65,24 +63,6 @@
       "source": "https://commons.wikimedia.org/wiki/File:Chohung_Bank_Headquarters_(2000).jpg"
     },
     {
-      "id": "bluehouse",
-      "file": "photos/bluehouse.jpg",
-      "alt": "청와대 본관 전경",
-      "keywords": [
-        "정책",
-        "정부",
-        "청와대",
-        "대통령",
-        "장관",
-        "개각",
-        "규제",
-        "국회"
-      ],
-      "width": 616,
-      "height": 408,
-      "kb": 53
-    },
-    {
       "id": "construct",
       "file": "photos/construct.jpg",
       "alt": "타워크레인이 선 건설 현장",
@@ -109,9 +89,27 @@
       "source": "https://commons.wikimedia.org/wiki/File:Gold_bullion_bars.jpg"
     },
     {
+      "id": "govt",
+      "file": "photos/govt.jpg",
+      "alt": "국회의사당",
+      "keywords": [
+        "정책",
+        "정부",
+        "국회",
+        "대통령",
+        "장관",
+        "개각",
+        "규제",
+        "법안",
+        "예산"
+      ],
+      "credit": "AnbyG / Wikimedia Commons · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Fountain_in_National_Assembly_Building_of_South_Korea.jpg"
+    },
+    {
       "id": "krw-cash",
       "file": "photos/krw-cash.jpg",
-      "alt": "한국 만원권 지폐",
+      "alt": "원화 지폐",
       "keywords": [
         "환율",
         "원화",
@@ -120,36 +118,32 @@
         "금융",
         "은행",
         "자금",
-        "수급",
-        "증권"
+        "수급"
       ],
-      "width": 621,
-      "height": 924,
-      "kb": 36
+      "credit": "The Bank of Korea한국은행 / Wikimedia Commons · South Korean currency",
+      "source": "https://commons.wikimedia.org/wiki/File:Currency_South_Korea.jpg"
     },
     {
       "id": "nyse",
       "file": "photos/nyse.jpg",
-      "alt": "뉴욕증권거래소 건물 외관",
+      "alt": "뉴욕증권거래소",
       "keywords": [
         "미국증시",
         "뉴욕",
         "월가",
         "다우",
         "나스닥",
-        "S&P",
         "연준",
         "금리",
         "해외"
       ],
-      "width": 640,
-      "height": 431,
-      "kb": 63
+      "credit": "Giorgio Galeotti / Wikimedia Commons · CC BY 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:New_York_Stock_Exchange_-_Wall_Street,_New_York,_NY,_USA_-_August_19,_2015_-_panoramio.jpg"
     },
     {
       "id": "oil",
       "file": "photos/oil.jpg",
-      "alt": "원유 채굴 현장",
+      "alt": "원유 시추 현장",
       "keywords": [
         "유가",
         "원유",
@@ -157,12 +151,10 @@
         "에너지",
         "정유",
         "중동",
-        "호르무즈",
         "원자재"
       ],
-      "width": 640,
-      "height": 442,
-      "kb": 18
+      "credit": "Jengod / Wikimedia Commons · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Pumpjacks_Inglewood_Oil_Field_seen_from_Baldwin_Hills_Scenic_Overlook.jpg"
     },
     {
       "id": "port",
@@ -198,7 +190,7 @@
     {
       "id": "semiconductor",
       "file": "photos/semiconductor.jpg",
-      "alt": "반도체 웨이퍼 클로즈업",
+      "alt": "반도체 웨이퍼",
       "keywords": [
         "반도체",
         "웨이퍼",
@@ -210,9 +202,8 @@
         "AI",
         "엔비디아"
       ],
-      "width": 640,
-      "height": 417,
-      "kb": 41
+      "credit": "Rob Bulmahn / Wikimedia Commons · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:5C2A5953R_-_49913961083_%E2%80%93_Silicon_Wafer_20200519.jpg"
     },
     {
       "id": "shipyard",
@@ -232,7 +223,7 @@
     {
       "id": "soju",
       "file": "photos/soju.jpg",
-      "alt": "진열된 소주병들",
+      "alt": "소주",
       "keywords": [
         "소비",
         "유통",
@@ -240,12 +231,10 @@
         "주류",
         "소주",
         "내수",
-        "산업",
-        "가격"
+        "물가"
       ],
-      "width": 640,
-      "height": 428,
-      "kb": 58
+      "credit": "Kārlis Dambrāns / Wikimedia Commons · CC BY 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Soju_2.jpg"
     },
     {
       "id": "steel",
