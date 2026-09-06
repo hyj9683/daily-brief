@@ -94,6 +94,20 @@
       "source": "https://commons.wikimedia.org/wiki/File:Building_construction_crane_Moira_Close_Broadwater_Farm_Haringey_2025_28.jpg"
     },
     {
+      "id": "corp-holding",
+      "file": "photos/corp-holding.jpg",
+      "alt": "서울 강남 삼성동 오피스 빌딩가",
+      "keywords": [
+        "대기업",
+        "지주회사",
+        "인적분할",
+        "지배구조",
+        "기업분할"
+      ],
+      "credit": "Hachimaki (a flickr user) / Wikimedia Commons · CC BY-SA 2.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Seoul-Samsungdong-buildings-01.jpg"
+    },
+    {
       "id": "gold",
       "file": "photos/gold.jpg",
       "alt": "금괴",
