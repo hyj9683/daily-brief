@@ -1,0 +1,213 @@
+<!--
+  텔레그램용 "오늘의 신문" 카드뉴스 예시 (2026-09-10 발행분, 그대로 검증되어 발송됨).
+
+  daily-econ-brief 5단계에서 매일 이 파일을 참고해 그날 내용으로 새로 작성한다.
+  통짜 신문 이미지를 자르는 방식(예전 방식, 폐기됨) 대신 "카드 한 장 = 이야기 하나"로
+  처음부터 모바일에 맞게 쓴다. 카드 수는 그날 이슈 개수에 맞춰 늘거나 줄어도 된다
+  (표지 1장 + 스토리별 1장씩 + 용어/출처 1장이 기본 골격, 총 8~10장 안팎).
+
+  구조:
+  - .card.cover   : 마스트헤드 + 발행일 + 티커 그리드(코스피/코스닥/원달러/WTI) + 한줄 헤드라인
+  - .card (일반)  : .eyebrow(분야 태그, --cat 색상) + h1.headline + (선택)사진 + (선택).bigstat
+                    또는 .statrow + .body-p 문단 2~3개 + .src
+  - 마지막 .card  : .tg 반복(용어) + .footnote(출처·데이터기준·표기 안내)
+  - 색상은 --finance/--global/--realestate/--industry/--policy/--consumer 중 분야에 맞게
+    카드의 style="--cat:var(--...)" 로 지정
+
+  캡처 방법: 브라우저 뷰포트를 440~460px 폭으로 맞추고, 카드마다
+  `html2canvas(cardEl, {scale:2, useCORS:true})` 로 **개별** 캡처한다(잘라내기 불필요 —
+  카드 자체가 이미 하나의 완결된 단위라 위아래로 잘릴 일이 없다).
+  자세한 절차는 SKILL.md 5단계 "신문 지면 이미지도 함께 보낸다" 참고.
+-->
+<!doctype html>
+<html><head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@400;600;700;800&family=Nanum+Myeongjo:wght@400;700;800&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<style>
+:root{
+  --ground:#F3F1EC; --surface:#FAF9F6; --sunk:#EDEAE3;
+  --ink:#17191D; --ink2:#3C4048; --muted:#71767F;
+  --rule:#CFCBC2; --hair:#E0DCD3;
+  --up:#B4272A; --down:#1B5FA8;
+  --finance:#6C3E8A; --global:#0E6E52; --realestate:#B0562E;
+  --industry:#16324F; --policy:#8A6810; --consumer:#A6334F;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#ccc;font-family:"Gothic A1",sans-serif}
+.card{
+  width:440px;background:var(--surface);color:var(--ink);
+  padding:30px 26px 26px;margin:16px auto;
+  border:1px solid var(--hair);
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:7px;
+  font-size:13px;font-weight:800;letter-spacing:.06em;color:var(--cat,var(--industry));
+  margin:0 0 10px;
+}
+.eyebrow::before{content:"";width:6px;height:16px;background:var(--cat,var(--industry));}
+h1.headline{
+  font-family:"Nanum Myeongjo",serif;font-weight:800;font-size:27px;line-height:1.32;
+  margin:0 0 10px;color:var(--ink);
+}
+p.dek{font-size:14.5px;font-weight:600;color:var(--cat,var(--ink2));margin:0 0 16px;line-height:1.55}
+.photo{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--rule);display:block;margin:0 0 6px}
+.credit{display:block;font-size:10.5px;color:var(--muted);margin:0 0 16px;opacity:.85}
+.bigstat{font-family:"Gothic A1",sans-serif;font-weight:800;font-size:44px;margin:0 0 4px;color:var(--ink)}
+.bigstat .d{font-size:18px;font-weight:700;margin-left:10px}
+.up{color:var(--up)} .down{color:var(--down)}
+.statrow{display:flex;justify-content:space-between;align-items:baseline;padding:9px 0;border-bottom:1px solid var(--hair);font-size:14.5px}
+.statrow:last-of-type{border-bottom:1px solid var(--ink);margin-bottom:16px}
+.statrow b{font-family:"Gothic A1",sans-serif;font-size:17px}
+body.pg{font-family:"Nanum Myeongjo",serif;font-size:15.5px;line-height:1.85;color:var(--ink2);margin:0 0 8px}
+.body-p{font-family:"Nanum Myeongjo",serif;font-size:15.5px;line-height:1.85;color:var(--ink2);margin:0 0 12px}
+.body-p:last-of-type{margin-bottom:16px}
+.src{font-size:11.5px;color:var(--muted);margin-top:2px;border-top:1px solid var(--hair);padding-top:10px}
+.rule{height:1px;background:var(--hair);margin:16px 0}
+
+/* cover card */
+.cover{text-align:center;padding-top:34px}
+.cover .issuerow{display:flex;justify-content:space-between;font-family:"Gothic A1",sans-serif;font-size:11px;color:var(--muted);letter-spacing:.03em;text-transform:uppercase;border-bottom:1px solid var(--hair);padding-bottom:10px;margin-bottom:18px;text-align:left}
+.cover h1{font-family:"Nanum Myeongjo",serif;font-weight:800;font-size:52px;margin:6px 0 6px}
+.cover .tag2{font-family:"Gothic A1",sans-serif;font-size:12.5px;color:var(--muted);margin-bottom:20px}
+.cover .rule2{height:3px;background:var(--ink);margin:0 0 22px}
+.tickgrid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin-bottom:22px;text-align:left}
+.tickcell{padding:14px 10px;border-left:1px solid var(--hair)}
+.tickcell:nth-child(odd){border-left:0}
+.tickcell:nth-child(n+3){border-top:1px solid var(--hair)}
+.tickcell .n{font-family:"Gothic A1",sans-serif;font-size:11.5px;color:var(--muted);display:block;margin-bottom:4px}
+.tickcell .v{font-family:"Gothic A1",sans-serif;font-size:21px;font-weight:800;display:block}
+.tickcell .d{font-family:"Gothic A1",sans-serif;font-size:13px;font-weight:700}
+.cover .teaser{font-family:"Nanum Myeongjo",serif;font-size:17px;line-height:1.6;font-weight:700;color:var(--ink);text-align:left}
+.pagemark{position:absolute;top:14px;right:18px;font-family:"Gothic A1",sans-serif;font-size:11px;color:var(--muted)}
+.card{position:relative}
+
+/* terms card */
+.tg{padding:11px 0;border-bottom:1px solid var(--hair)}
+.tg:last-of-type{border-bottom:1px solid var(--ink);margin-bottom:16px}
+.tg b{display:block;font-family:"Gothic A1",sans-serif;font-size:15px;color:var(--industry);margin-bottom:3px}
+.tg span{font-size:13.5px;color:var(--ink2);line-height:1.6}
+.footnote{font-family:"Gothic A1",sans-serif;font-size:11px;color:var(--muted);line-height:1.8}
+</style>
+</head>
+<body>
+
+<section class="card cover" id="card1">
+  <div class="issuerow"><span>2026년 9월 10일 목요일 조간</span><span>1/9</span></div>
+  <h1>오늘의<br>經濟</h1>
+  <div class="tag2">국내외 경제 보도를 원문까지 확인해 하루 한 장으로 정리합니다</div>
+  <div class="rule2"></div>
+  <div class="tickgrid">
+    <div class="tickcell"><span class="n">코스피 (9/9)</span><span class="v">7,051.64</span><span class="d up">+1.40%</span></div>
+    <div class="tickcell"><span class="n">코스닥 (9/9)</span><span class="v">830.37</span><span class="d up">+2.28%</span></div>
+    <div class="tickcell"><span class="n">원/달러</span><span class="v">1,339.3</span><span class="d down">−4.25원</span></div>
+    <div class="tickcell"><span class="n">WTI</span><span class="v">$96.05</span><span class="d up">+3.25%</span></div>
+  </div>
+  <div class="teaser">코스피, 33거래일 만에 7000선 탈환 — 뉴욕은 유가 쇼크에 사흘째 하락</div>
+</section>
+
+<section class="card" id="card2" style="--cat:var(--finance)">
+  <span class="pagemark">2/9 · 증시</span>
+  <p class="eyebrow">증시</p>
+  <h1 class="headline">코스피, 33거래일 만에<br>7000선 탈환</h1>
+  <p class="dek">외국인·기관 쌍끌이 매수, SK하이닉스 +3.51%</p>
+  <div class="bigstat">7,051.64<span class="d up">+1.40%</span></div>
+  <div class="statrow"><span>코스닥</span><b class="up">830.37 (+2.28%)</b></div>
+  <div class="statrow"><span>원/달러</span><b class="down">1,339.3원 (−4.25원)</b></div>
+  <p class="body-p">9일 코스피는 전 거래일보다 97.12포인트(+1.40%) 오른 7,051.64로 마감했다. 종가 기준 7,000선 회복은 지난 7월 23일 이후 33거래일 만이다. 외국인과 기관이 동반 매수에 나섰고, AI 기대감에 반도체·이차전지가 함께 강세를 보였다.</p>
+  <p class="body-p">지수는 6,972.87로 출발해 장중 7,112.48까지 올랐다가 상승분 일부를 반납한 채 마감했다. SK하이닉스가 +3.51% 오른 185만 6,000원에 마감하며 지수 상승을 이끌었다. 개인은 이날도 매물을 내놓아 2조원대 순매도를 기록한 것으로 전해졌다.</p>
+  <p class="src">출처 · 한국거래소, 화이트페이퍼, 폴리뉴스, 한스비즈, KDF뉴스, 비즈니스코리아</p>
+</section>
+
+<section class="card" id="card3" style="--cat:var(--finance)">
+  <span class="pagemark">3/9 · 해외 증시</span>
+  <p class="eyebrow">해외 증시</p>
+  <h1 class="headline">유가·금리 쇼크에<br>사흘 연속 하락</h1>
+  <img class="photo" src="photos/nyse.jpg" alt="뉴욕증권거래소">
+  <span class="credit">국제유가 100달러 재돌파에 뉴욕 3대 지수가 사흘 연속 내렸다. 자료 사진. · Giorgio Galeotti / Wikimedia Commons · CC BY 3.0</span>
+  <div class="statrow"><span>다우존스</span><b class="down">52,380.66 (−0.77%)</b></div>
+  <div class="statrow"><span>S&amp;P 500</span><b class="down">7,636.36 (−0.48%)</b></div>
+  <div class="statrow"><span>나스닥</span><b class="down">26,253.34 (−0.64%)</b></div>
+  <p class="body-p">9일(현지시간) 뉴욕 증시는 국제유가가 배럴당 100달러를 다시 넘어서고 미 국채 10년물 금리가 4.8%대로 치솟으면서 3대 지수가 동반 하락했다. VIX는 +4.71% 오른 16.46을 기록했다. 사흘 연속 하락이다.</p>
+  <p class="body-p">이번 주 후반 발표될 8월 생산자물가지수(PPI, 9/10)와 소비자물가지수(CPI, 9/11)를 앞두고 물가·금리 경계감이 커졌다. 월가는 8월 CPI가 전월 대비 0.4% 오를 것으로 본다.</p>
+  <p class="src">출처 · 렉처러뉴스, 디지털투데이, 지크시르</p>
+</section>
+
+<section class="card" id="card4" style="--cat:var(--global)">
+  <span class="pagemark">4/9 · 원자재·환율</span>
+  <p class="eyebrow">원자재 · 환율</p>
+  <h1 class="headline">국제유가 100달러,<br>원화는 23개월래 최저</h1>
+  <img class="photo" src="photos/oil.jpg" alt="원유 시추 현장">
+  <span class="credit">브렌트유가 101달러를 넘어서며 중동발 공급 차질 우려가 되살아났다. 자료 사진. · Jengod / Wikimedia Commons · CC BY-SA 4.0</span>
+  <div class="statrow"><span>WTI</span><b class="up">$96.05 (+3.25%)</b></div>
+  <div class="statrow"><span>원/달러</span><b class="down">1,339.3원 (−4.25원)</b></div>
+  <p class="body-p">미국과 이란의 군사적 긴장이 다시 불거지며 국제유가가 급등했다. WTI는 전 거래일보다 3.25% 오른 배럴당 96.05달러에 마감했고, 브렌트유도 101달러를 넘어섰다는 보도가 나왔다.</p>
+  <p class="body-p">보통 유가 상승은 원화 약세 요인이지만, 이번엔 반도체 수출 대금 유입이 맞물리며 원/달러 환율은 오히려 4.25원 내린 1,339.3원으로 약 23개월 만에 가장 낮은 수준을 기록했다.</p>
+  <p class="src">출처 · 렉처러뉴스, 이투데이, 지크시르, 매거진한경</p>
+</section>
+
+<section class="card" id="card5" style="--cat:var(--policy)">
+  <span class="pagemark">5/9 · 정책 · 통화</span>
+  <p class="eyebrow">정책 · 통화</p>
+  <h1 class="headline">한국은행,<br>두 달 연속 기준금리 인상</h1>
+  <img class="photo" src="photos/bank.jpg" alt="한국은행 본관">
+  <span class="credit">한국은행이 두 달 연속 기준금리를 올려 연 3.00%가 됐다. 자료 사진. · Seoul Institute / Wikimedia Commons · CC BY 4.0</span>
+  <div class="bigstat">3.00%<span class="d up" style="font-size:14px;">두 달 연속 인상</span></div>
+  <p class="body-p">한국은행이 지난 7월에 이어 8월까지 두 달 연속 기준금리를 올려 현재 연 3.00%가 됐다. 반도체 호황에 성장률은 개선됐지만 물가·집값·환율 압박이 계속되는 상황이다.</p>
+  <p class="body-p">신현송 한은 총재는 통화 긴축 기조 유지를 시사했다. 미국 국채 10년물 금리도 4.8%대로 치솟으며 국내외 금리가 동반 상승했다.</p>
+  <p class="src">출처 · 매거진한경, 한스비즈, 스마트비즈엔</p>
+</section>
+
+<section class="card" id="card6" style="--cat:var(--realestate)">
+  <span class="pagemark">6/9 · 부동산</span>
+  <p class="eyebrow">부동산</p>
+  <h1 class="headline">다시 불붙은 '영끌' —<br>생애최초 구입 54% 돌파</h1>
+  <img class="photo" src="photos/apartment.jpg" alt="서울 아파트 단지">
+  <span class="credit">서울 생애최초 주택구입 비중이 54%를 넘어섰다. 자료 사진. · kallerna / Wikimedia Commons · CC BY-SA 4.0</span>
+  <p class="body-p">서울 집합건물 생애최초 구입 비중이 54%를 돌파했다. 저리 정책대출을 쓸 수 있는 30대 젊은층 중심으로 매수가 활발하다.</p>
+  <p class="body-p">30대는 부동산 처분대금 비중이 18.7%로 40대(37.8%)·50대(43.1%)보다 낮아, 자기자금 부족을 대출로 메우는 구조다. 정책대출 문턱이 낮은 젊은 세대가 다시 '영끌'(영혼까지 끌어모아 대출) 매수에 나서는 모습이다.</p>
+  <p class="src">출처 · 전남일보</p>
+</section>
+
+<section class="card" id="card7" style="--cat:var(--industry)">
+  <span class="pagemark">7/9 · 산업 · 수출</span>
+  <p class="eyebrow">산업 · 수출</p>
+  <h1 class="headline">반도체 수출 호조,<br>원화 강세로 이어지다</h1>
+  <img class="photo" src="photos/semiconductor.jpg" alt="반도체 웨이퍼">
+  <span class="credit">반도체 수출 호조가 무역흑자와 원화 강세를 뒷받침하고 있다. 자료 사진. · Rob Bulmahn / Wikimedia Commons · CC BY 2.0</span>
+  <p class="body-p">반도체 수출 호조에 힘입은 무역수지 흑자 기조가 이어지는 중이다. 수출기업이 벌어들인 달러가 꾸준히 국내로 환전되며 원화 강세 요인으로 작용하고 있다.</p>
+  <p class="body-p">전문가들은 이런 흐름이 최근 원화 강세를 뒷받침하고 있다고 분석한다. 원/달러 환율은 이날 23개월 만에 최저권(1,339.3원)까지 하락했다.</p>
+  <p class="src">출처 · 이투데이</p>
+</section>
+
+<section class="card" id="card8" style="--cat:var(--consumer)">
+  <span class="pagemark">8/9 · 소비 · 수출</span>
+  <p class="eyebrow">소비 · 수출</p>
+  <h1 class="headline">중남미도 'K-뷰티' 열풍<br>— 화장품 수출 160%↑</h1>
+  <img class="photo" src="photos/kbeauty.jpg" alt="한국 화장품 매장">
+  <span class="credit">중남미 화장품 수출이 2년 새 160% 늘었다. 자료 사진. · Donald Trung / Wikimedia Commons · CC BY-SA 4.0</span>
+  <p class="body-p">멕시코·브라질·아르헨티나 등 중남미향 한국 화장품 수출이 2년 새 160% 증가했다. 지난해 수출액은 9,200만달러(약 1,233억원)로 집계됐다.</p>
+  <p class="body-p">최대 시장인 미국은 올 상반기 한국 화장품 수입액이 14억 5,000만달러로 전년 동기 대비 41.5% 증가했다. SNS를 통한 확산이 K-뷰티 성장의 핵심 동력으로 꼽힌다.</p>
+  <p class="src">출처 · MBN, MBC뉴스투데이, 뉴스1</p>
+</section>
+
+<section class="card" id="card9">
+  <span class="pagemark">9/9</span>
+  <h1 class="headline" style="font-size:24px">오늘의 경제 용어</h1>
+  <div class="tg"><b>기준금리</b><span>한국은행이 시중은행에 돈을 빌려줄 때 기준으로 삼는 금리. 이 금리가 오르면 대출금리·예금금리가 따라 움직인다.</span></div>
+  <div class="tg"><b>국채금리</b><span>정부가 발행한 채권의 이자율. 오르면 정부·기업이 돈을 빌리는 비용이 커지고, 위험자산의 매력은 상대적으로 떨어진다.</span></div>
+  <div class="tg"><b>생산자물가지수(PPI)</b><span>기업이 원자재·제품을 사고팔 때의 가격 변동. 소비자물가보다 한발 앞서 움직여 '물가의 선행지표'로 불린다.</span></div>
+  <div class="tg"><b>소비자물가지수(CPI)</b><span>가계가 실제 구입하는 상품·서비스 가격의 변동. 중앙은행이 금리를 정할 때 가장 중요하게 보는 숫자다.</span></div>
+  <div class="tg"><b>무역수지</b><span>일정 기간 수출액에서 수입액을 뺀 값. 플러스면 '흑자', 마이너스면 '적자'라 부른다.</span></div>
+  <div class="tg"><b>영끌</b><span>'영혼까지 끌어모아 대출한다'는 뜻의 줄임말. 자기 자금이 부족한 젊은 세대가 무리하게 대출을 내 집을 사는 현상을 가리킨다.</span></div>
+  <p class="footnote">
+    데이터 기준 — 통화정책·부동산·산업 수치는 9월 10일(목) 조간 보도 기준, 시장 수치는 9월 9일(수) 정규장 마감(미국은 같은 날 현지시간 마감) 기준입니다.<br><br>
+    밝혀 둘 것 — 코스피 투자주체별 순매수 정확한 금액은 확인하지 못해 방향성만 실었습니다. 브렌트유는 '101달러 돌파' 보도만 확인했고 정확한 종가는 확인하지 못했습니다.<br><br>
+    출처 — 한국거래소, 화이트페이퍼, 폴리뉴스, 한스비즈, KDF뉴스, 비즈니스코리아, SBS Biz, 렉처러뉴스, 디지털투데이, 지크시르, 이투데이, 매거진한경, 스마트비즈엔, 전남일보, MBN, MBC뉴스투데이, 뉴스1.<br><br>
+    표기 — 국내 관행에 따라 상승은 빨강, 하락은 파랑. 이 지면은 시장 상황 정리용이며 투자 권유가 아닙니다.
+  </p>
+</section>
+
+</body></html>
