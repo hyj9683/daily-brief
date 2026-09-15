@@ -232,6 +232,19 @@
       "source": "https://commons.wikimedia.org/wiki/File:Agriculture_Research_Service_(ARS)_(8411827143).jpg"
     },
     {
+      "id": "retail-labor",
+      "file": "photos/retail-labor.jpg",
+      "alt": "대형마트 매장 진열대",
+      "keywords": [
+        "유통",
+        "대형마트",
+        "임금체불",
+        "소매업"
+      ],
+      "credit": "Tessa Bury / Wikimedia Commons · CC BY 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Grocery_Store_Aisle,_vermont.jpg"
+    },
+    {
       "id": "semiconductor",
       "file": "photos/semiconductor.jpg",
       "alt": "반도체 웨이퍼",
