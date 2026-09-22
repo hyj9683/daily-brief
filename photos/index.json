@@ -108,6 +108,22 @@
       "source": "https://commons.wikimedia.org/wiki/File:Seoul-Samsungdong-buildings-01.jpg"
     },
     {
+      "id": "gasplant",
+      "file": "photos/gasplant.jpg",
+      "alt": "가스복합화력발전소 설비",
+      "keywords": [
+        "발전",
+        "가스복합화력",
+        "LNG",
+        "발전소",
+        "전력",
+        "대미투자",
+        "에너지"
+      ],
+      "credit": "Harald the Bard / Wikimedia Commons · CC BY-SA 4.0",
+      "source": "https://commons.wikimedia.org/wiki/File:A_view_from_a_natural_gas_combined_cycle_power_plant.jpg"
+    },
+    {
       "id": "gold",
       "file": "photos/gold.jpg",
       "alt": "금괴",
