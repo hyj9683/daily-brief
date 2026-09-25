@@ -184,6 +184,21 @@
       "source": "https://commons.wikimedia.org/wiki/File:Currency_South_Korea.jpg"
     },
     {
+      "id": "mexico-palace",
+      "file": "photos/mexico-palace.jpg",
+      "alt": "멕시코시티 대통령궁(국립궁전) 정면",
+      "keywords": [
+        "멕시코",
+        "중남미",
+        "대통령궁",
+        "순방",
+        "통상",
+        "투자"
+      ],
+      "credit": "Daniel Case / Wikimedia Commons · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:Front_facade_of_Palacio_Nacional_from_southwest,_Mexico_City.jpg"
+    },
+    {
       "id": "nyse",
       "file": "photos/nyse.jpg",
       "alt": "뉴욕증권거래소",
