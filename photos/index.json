@@ -108,6 +108,22 @@
       "source": "https://commons.wikimedia.org/wiki/File:Seoul-Samsungdong-buildings-01.jpg"
     },
     {
+      "id": "cyber",
+      "file": "photos/cyber.jpg",
+      "alt": "데이터센터 서버실",
+      "keywords": [
+        "해킹",
+        "보안",
+        "금융보안",
+        "사이버",
+        "전산",
+        "데이터센터",
+        "IT"
+      ],
+      "credit": "BalticServers.com / Wikimedia Commons · CC BY-SA 3.0",
+      "source": "https://commons.wikimedia.org/wiki/File:BalticServers_data_center.jpg"
+    },
+    {
       "id": "gasplant",
       "file": "photos/gasplant.jpg",
       "alt": "가스복합화력발전소 설비",
